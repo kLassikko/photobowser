@@ -1,10 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  margin: auto;
+  width: 70vw;
+  font-family: "Arial";
 }
 
 .App-header {
@@ -18,15 +16,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 50px;
+  margin: 50px;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a.Header {
+  text-decoration: none;
+}
+
+a:visited h1 {
+  color: black;
+}
+
+.Thumbnail {
+  margin: 10px;
 }
