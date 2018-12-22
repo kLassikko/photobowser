@@ -33,10 +33,31 @@ class App extends Component {
 }
 
 class Pic extends Component {
+
+  state = {
+    data: {}
+  }
+
+  getPhoto = (id) => {
+    Client.get(`photos/${id}`, data => {
+      this.setState({
+        data: data
+      })
+    })
+  }
+
+  componentDidMount() {
+    this.getPhoto(this.props.match.params.id)
+  }
+
   render() {
     return (
-      <p> full size photo view here </p>
-    );
+      <div>
+        <img src={this.state.data.url} alt={this.state.data.title}
+          className="Photo" />
+        <p> {this.state.data.title} </p>
+      </div>
+    )
   }
 }
 
