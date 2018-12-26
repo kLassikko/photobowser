@@ -32,4 +32,9 @@ a:visited h1 {
 
 .Thumbnail {
   margin: 10px;
+  max-width: 30vw;
+}
+
+.Photo {
+  max-width: 100%;
 }
