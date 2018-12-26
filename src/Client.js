@@ -1,5 +1,6 @@
 function get(uri, cb) {
-  return fetch('http://localhost:3000/' + uri, {
+  return fetch('https://jsonplaceholder.typicode.com/' + uri, {
+    crossDomain:true,
     accept: "application/json"
   })
     .then(checkStatus)
