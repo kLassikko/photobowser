@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Gallery from './Gallery';
 import Photo from './Photo';
 import './App.css';
+import banner from'./photobowserbanner.svg';
 
 class App extends Component {
 
@@ -20,7 +21,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-          <Link to="/" className="Header"><h1>Photo Bowser</h1></Link>
+          <Link to="/" className="Header"><img src={banner} alt="banner" /></Link>
           <Route path="/" exact render={()=><Gallery thumbnails={this.state.thumbnails} 
             hasMore={this.state.hasMore}
             updateState={this.updateState} />} />
